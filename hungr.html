@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hungr Future Concept - Colin Schotsman</title>
+    <link rel="stylesheet" href="https://use.typekit.net/uop0ask.css">
+    <script src="https://player.vimeo.com/api/player.js">
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'GA_MEASUREMENT_ID');
+</script>
+    
+    <style>
+        
+        *{
+            box-sizing: border-box;
+            margin: 0;
+        }
+body {
+  margin: 0;
+  width:100%;
+  height:100%; 
+}
+        #header{ 
+            width:100%;
+            height:100%;
+            display: block;
+            overflow: hidden;
+            padding: 80px;
+        }
+        #contextInfo{
+            padding-top: 50px;
+        }
+/*        navigation bar css referenced sticky nav from W3schools website */
+.topnav {
+  overflow: hidden;
+  background-color: #ffffff;
+  z-index:6;
+}      
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+        }
+        .sticky + #header{
+            padding-top:150px;
+        }
+.topnav a.active {
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 20px 80px;
+  text-decoration: none;
+  font-size: 1.5em;
+  color: #000000;
+  font-family: industry, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.topnav a.buttons {
+  float: right;
+  display: block;
+  color: #000000;
+  text-align: center;
+  padding: 20px 50px;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-family: industry, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+}
+        
+.topnav a:hover {
+  color: #f58310;
+}
+
+.topnav a.active:hover {
+  color: #000000;
+}   
+        
+#title{
+    color:black;
+    clear: both;
+        }
+h1{
+    line-height:0.1em;
+    color:#000000;
+    font-size:5.91em;
+    font-family: industry, sans-serif;
+    font-style: normal;
+    font-weight: 900;
+        } 
+p {
+    line-height:0.2em;
+    padding:0.2px;
+    font-size: 1.0em;
+    font-family: industry, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+        }
+        
+#content{
+        display: block;
+        padding-left: 80px;
+        padding-right: 80px;
+        } 
+        mark{
+            background: #fff;
+        }
+ a{
+       text-decoration: none;     
+        }
+        p {
+            font-size: 1.0em;
+            line-height: 1.2em;
+            font-family: industry, sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 2.0em;
+        }
+        #intro{
+            padding-right: 20px;
+            align-content: center;
+        }
+        #intro2{
+           padding-left: 20px;
+            align-content: center; 
+        }
+        h2{
+            font-size:2.3em;
+            font-family: industry, sans-serif;
+            font-style: normal;
+            font-weight: 800;
+            color: #f58310;
+            padding-top: 60px;
+            line-height: 1.0;
+        }
+        #projectsTitle{
+            padding-left:80px;
+            padding-right:80px;
+            padding-bottom: 40px;
+            padding-top: 0px;
+            font-size: 2.3em;
+            font-family: industry, sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            clear: both;
+        }
+        .titleWork{
+            font-size: 1.7em;
+            font-family: industry, sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            text-decoration: none;
+            padding-bottom: 20px;
+            
+        }
+        #tagLine{
+         margin-top:-98px;
+         padding-left:5px;
+         position:absolute;
+         font-size: 1.5em;
+         font-family: industry, sans-serif;
+         font-style: normal;
+         font-weight: 700;
+        }
+        h3{
+         font-size: 1.7em;
+         font-family: industry, sans-serif;
+         font-style: normal;
+         font-weight: 600; 
+        }
+        
+        #portraitBox{
+            width: 100%;
+            height:100%;
+            justify-content: center;
+            display:block;
+        }
+        .portrait{
+            width:100%;
+            height:100%;
+        }
+        
+        .column {
+  float: left;
+  width: 50%;
+}
+        
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+         #role{
+            float: left;
+            width:45%
+        }
+        #team{
+            float:right;
+            width:45%;
+        }
+        #toolsUsed{
+            float:right;
+            width:45%;
+            padding-top: 40px;
+        }
+        #context{
+            float:left;
+            width:45%;
+            padding-top: 40px;
+        }
+        footer{
+            padding: 90px;
+            font-size: 1.0em;
+            font-family: industry, sans-serif;
+            font-style: normal;
+            font-weight: 700;
+        } 
+        #problemStatement{
+            clear:both;
+            padding: 80px;
+            background: #f58310;
+            color: white;
+        }
+        #approach{
+            clear:both;
+            padding: 80px;
+        }
+        ul{
+            list-style: decimal;
+            font-size: 1.0em;
+            font-family: industry, sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 2.0em;
+        }
+        .process{
+            padding: 80px;
+        }
+        #myImg{
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+    width:100%;
+}
+        #myImg2{
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  width:100%;
+}
+         #myImg3{
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  width:100%;
+}
+          #myImg4{
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  width:100%;
+}
+          #myImg5{
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  width:100%;
+}
+          #myImg6{
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  width:100%;
+}
+         #myImg7{
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  width:100%;
+} 
+          #myImg8{
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  width:100%;
+}
+          #myImg9{
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  width:100%;
+}
+        
+#myImg:hover {opacity: 0.7;}
+        #myImg2:hover{opacity: 0.7;}
+         #myImg3:hover{opacity: 0.7;}
+         #myImg4:hover{opacity: 0.7;}
+         #myImg5:hover{opacity: 0.7;}
+         #myImg6:hover{opacity: 0.7;}
+         #myImg7:hover{opacity: 0.7;}
+         #myImg8:hover{opacity: 0.7;}
+         #myImg9:hover{opacity: 0.7;}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 100; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+  font-size: 2.0em;
+            font-family: industry, sans-serif;
+            font-style: normal;
+            font-weight: 700;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  z-index: 200;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+        .tilesContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(18rem,1fr));
+    justify-items: center;
+    grid-gap: 8.0rem;
+    padding-top:80px;
+    padding-bottom: 40px;
+    
+}
+.tileWrap {
+    display: block;
+    flex-wrap: wrap;
+    border-radius: 18px;
+    transition: all .2s ease-in-out;
+    width: 100%;
+    background-size: 100%;
+    height:100%;
+    background-position: 50%;
+    border: 0;
+    text-decoration: none;
+        }
+        #finalTitle{
+            padding-left: 80px;
+            padding-bottom: 20px;
+        }
+        video{
+                position: static;
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+        }
+
+        
+ /*        when it is 1200px or wider */
+        @media screen and (min-width: 1200px) { 
+  h1 {
+    font-size: 6.0em;
+  }
+h2 {
+    font-size: 3.0em;     
+            }
+    h3{
+         font-size: 2.0em;    
+            }
+    .titleWork{
+            font-size: 2.0em;
+    }
+#projectsTitle{
+    font-size: 3.0em;  
+            }
+    p {
+        font-size: 1.0em;
+    }
+    .topnav a.buttons{
+         font-size: 2.0em;
+        
+            }
+    .topnav a.active{
+          font-size: 2.0em;      
+            }
+    #tagLine {
+              margin-top:-125px;
+              font-size: 1.8em;
+            }
+     #title{
+        margin-top: 69px;
+    }
+            
+}
+/*        when it is 750px or less */
+@media screen and (max-width: 500px) { 
+  h1 {
+    font-size: 4.38em;
+  }
+  h2 {
+    font-size: 2.0em;     
+            }
+    h3{
+     font-size: 1.5em; 
+    }
+    .titleWork{
+            font-size: 1.5em;
+    }
+#projectsTitle{
+    font-size: 2.0em;
+    padding-left:40px;
+    padding-right:40px;
+    color: #000000;
+            }
+    .tilesContainer{
+        grid-template-columns: auto;
+    }
+    .tileWrap{
+        display: block;
+        height: 80px;
+    }
+    p {
+        font-size: 0.9em;
+    }
+    .topnav a.buttons{
+         font-size: 1.2em;
+        padding: 60px 15px;
+            }
+    .topnav a.active{
+        font-size: 1.4em;  
+        padding: 30px 25px;
+        width:10px;
+            }
+    #title{
+        padding-left: 0px;
+        margin-top: 110px
+    }
+    #tagLine {
+              margin-top:-60px;  
+              padding-left: 4px;
+              font-size: 1.3em;
+            }
+    #intro{
+            padding: 5px;
+        
+    }
+    #intro2{
+           padding-left: 0px;
+    }
+     .column {
+    width: 100%;
+  }
+     #role{
+            clear: both;
+            width:100%;
+        }
+        #team{
+            clear: both;
+            width:100%;
+            padding-top: 40px;
+        }
+        #toolsUsed{
+            clear: both;
+            width:100%;
+            padding-top: 40px;
+        }
+        #context{
+            clear: both;
+            width:100%;
+            padding-top: 40px;
+        }
+    video{
+        width:100%;
+    }
+    #myImg {
+        width:100%;
+    }
+    #myImg2 {
+        width:100%;
+    }
+    #portraitBox{
+            width: 100%;
+            height:250px;
+}
+        }
+        #back{
+            text-decoration: none;
+            color: #f58310;
+        }
+                /* Style all font awesome icons */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-instagram {
+  background: white;
+  color: #f58310;
+}
+
+/* Twitter */
+.fa-linkedin {
+  background: white;
+  color: #f58310;
+}
+</style>
+</head>
+  
+<body>
+    
+   <nav class="topnav" id="myTopnav">
+  <a href="index.html" class="active" id="name">COLIN SCHOTSMAN</a>
+  <a href="index.html" class="buttons">WORK</a>
+  <a href="#contact" class="buttons">CONNECT</a>
+  </nav>
+    
+    <div id="mainContent">
+<div id="header">
+    
+ <div id="title">
+  <h1>UI UX</h1>
+    <h2>Hungr &#45; Future Interface 2020</h2>
+     </div>
+    
+    <div id="contextInfo">
+    <div id="role">
+    <h3>Role</h3>
+    <p>Director, Motion Graphics Editor and UI Designer</p>
+    </div>
+    
+    <div id="team">
+    <h3>Team</h3>
+    <p>Jenny Nguyen and Sara Nguyen acted in the prototype video&#46;</p>
+    </div>
+    
+    <div id="toolsUsed">
+    <h3>Tools Used</h3>
+    <p>Adobe Premiere Pro, After Effects and Adobe Xd</p>
+    </div>
+    
+    <div id="context">
+    <h3>Context</h3>
+    <p>Developed a prototype video for a future interface that helps users track their eating habits and assists with creation of a grocery list according to the nutrients  body needs.</p>
+    </div>
+    </div>
+   </div>
+      </div> 
+    
+    <div id="problemStatement">
+    <h3>Problem</h3>
+    <p>How can we use technology to more nutritional grocery shopping decisions?</p>
+    </div>
+    
+    
+    <div id="approach">
+    <h3>Approach</h3>
+    <ul>
+        <li>Research</li>
+        <li>Wireframes</li>
+        <li>Storyboarding</li>
+        <li>Filming</li>
+        <li>Editing</li>
+        <li>Final</li>
+        </ul>
+   </div>
+     
+    <div class="process">
+    <div class="row">
+  
+    <div id="intro">
+        
+<!--    <h2>WHO&quest;</h2>-->
+     <h3>Research</h3>   
+     <p>Researched what kind of nutritional information can be used to shape eating decisions. Gathered different nutritional categories and information which was later used in the future food interface.</p>    
+    </div>
+  </div> 
+    </div>
+  
+    
+    <div class="process">
+     <div class="row">  
+    <div id="intro">
+        
+<!--    <h2>WHO&quest;</h2>-->
+     <h3>Wireframes &amp; Storyboards</h3>   
+     <p>Developed wireframes for the future interface with all nutritional information and images that would be on the final design. Then developed storyboards for the video. The story follows two people, one person with the device and one without, in order for viewers to see how Hungr could satisfy their needs when making a grocery list.</p>   
+    
+    </div>
+  </div>
+    </div>
+    
+    <div class="process">
+     <div class="row">  
+  
+    <div id="intro">
+        
+<!--    <h2>WHO&quest;</h2>-->
+     <h3>Filming &amp; Editing</h3>   
+     <p>I filmed all scenes on location with signed permissions from business owners and recruited two actors. One actor would play the user with the future device and one would be without it.</p>   
+    
+    </div>
+  </div>
+    </div>
+   
+    
+    <h3 id="finalTitle">Final Video</h3>
+    <div id="content">
+        <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/397885184" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+        <br><br>
+        <a href="index.html" id="back"><h3>BACK TO WORK</h3></a>
+        </div>
+    
+    <footer>
+    <div id="copyright">
+    &copy; 2021 COLIN SCHOTSMAN
+            </div>
+        <a href="https://www.instagram.com/cschotsm_art_design/" class="fa fa-instagram" target="_blank"></a>
+        <a href="https://www.linkedin.com/in/colin-schotsman-337a02207" class="fa fa-linkedin" target="_blank"></a>
+    </footer>
+    
+    
+    <script>
+        //Sticky nav code from W3schools, https://www.w3schools.com/howto/howto_js_navbar_sticky.asp
+  // When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+window.onload = function() {mySecondFunction()};
+// Get the header
+var header = document.getElementById("myTopnav");
+
+// Get the offset position of the navbar
+var sticky = header.offsetTop;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+ function mySecondFunction() {
+     if (window.innerWidth <= 750) {
+         document.getElementById("name").innerHTML = "COLIN SCHOT SMAN";
+     }
+ }
+  </script>
+</body>
+
+</html>

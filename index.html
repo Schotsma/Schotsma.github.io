@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colin Schotsman - Work</title>
+    <!-- p5 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
+    <script src="final.js"></script>
+<!--    Stylesheet for typography linked to website-->
+    <link rel="stylesheet" href="https://use.typekit.net/uop0ask.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'GA_MEASUREMENT_ID');
+</script>
+    
+    <style>
+        
+        *{
+            box-sizing: border-box;
+            margin: 0;
+        }
+body {
+  margin: 0;
+  width:100%;
+  height:100%; 
+}
+        canvas { 
+            display:block;
+            width:100%;
+            height:100%;
+        }
+/*        where the p5 js canvas fits in*/
+        #header{ 
+            width:100%;
+            height:100%;
+            display: block;
+            overflow: hidden;
+        }
+/*        navigation bar css referenced sticky nav from W3schools website */
+.topnav {
+  overflow: hidden;
+  background-color: #ffffff;
+  z-index:6;
+}      
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+        }
+        .sticky + #header{
+            padding-top:150px;
+        }
+.topnav a.active {
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 20px 80px;
+  text-decoration: none;
+  font-size: 1.5em;
+  color: #000000;
+  font-family: industry, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.topnav a.buttons {
+  float: right;
+  display: block;
+  color: #000000;
+  text-align: center;
+  padding: 20px 50px;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-family: industry, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+}
+.topnav a:hover {
+  color: #f58310;
+}
+
+.topnav a.active:hover {
+  color: #000000;
+}   
+        
+#title{
+    color:black;
+    position: absolute;
+    padding-left: 80px;
+    padding-top:5px;
+        }
+h1{
+    line-height:1.0em;
+    color:#000000;
+    text-align: left;
+    font-size:7.919em;
+    font-family: industry, sans-serif;
+    font-style: normal;
+    font-weight: 900;
+        } 
+p {
+    line-height:0.2em;
+    padding:0.2px;
+    font-size: 1.0em;
+    font-family: industry, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+        }
+        
+#content{
+/*        max-width: 1500px;*/
+        
+        display: block;
+/*        margin-top: 1000px;*/
+        } 
+        mark{
+            background: #fff;
+        }
+ a{
+       text-decoration: none;     
+        }
+.tilesContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(18rem,1fr));
+    justify-items: center;
+    grid-gap: 8.0rem;
+    padding-top:0px;
+    padding-bottom: 40px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+.tileWrap {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 18px;
+    transition: all .2s ease-in-out;
+    width: 100%;
+    background-size: 100%;
+    height: 288px;
+    background-position: 50%;
+    border: 0;
+    text-decoration: none;
+        }
+/*        Images placed in containers at bottom of site*/
+.tileWrap.Udesign {
+    background-image: url("img/uDesignDisplay.jpg");
+    background-size: cover;
+}
+.tileWrap.Google {
+    background-image: url(img/Screen%20Shot%202021-03-15%20at%201.40.09%20PM.png);
+}
+.tileWrap.Logo {
+    background-image: url(img/KlompenLogo.JPG);
+}
+.tileWrap.Wordplop {
+    background-image: url(img/Wordploporng.jpg);
+    background-size: cover;
+}
+        .tileWrap.Athena {
+    background-image: url(img/Athena_Mockup.jpg);
+    background-size: cover;
+}
+.tileWrap.Hungr {
+    background-image: url(img/Hungr2%202021-03-23%20at%2011.09.01%20AM.png);
+    background-size: cover;
+}
+.tileWrap.Climate {
+    background-image: url(img/Screen%20Shot%202021-03-16%20at%208.35.30%20PM.png);
+    background-size: cover;
+}
+.tileWrap.Book {
+    background-image: url(img/TheHobbitFullRed.jpg);
+    background-size: cover;
+}        
+ .tileWrap.Poster {
+    background-image: url(img/Poster%202021-03-15%20at%201.39.43%20PM.png);
+    background-size: cover;
+}  
+/*    placement of discription text */
+ .description {
+    width: 100%;
+    height: 100%;
+    padding-left: 5%;
+    padding-top: 3%;
+    opacity: 0%;
+    color: white;
+    font-family: industry, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+        }
+    .description:hover{
+            opacity:100%;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 20px;
+        }
+        p{
+            line-height: 1.2em;
+        }
+        .introParagraph {
+            font-size: 1.2em;
+            line-height: 1.2em;
+            font-family: industry, sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 2.0em;
+        }
+        #intro{
+            padding: 80px;
+            align-content: center;
+        }
+        h2{
+            font-size:2.3em;
+            font-family: industry, sans-serif;
+            font-style: normal;
+            font-weight: 800;
+            color: #f58310;
+            padding-top: 60px;
+        }
+        #projectsTitle{
+            padding-left:80px;
+            padding-right:80px;
+            padding-bottom: 40px;
+            padding-top: 0px;
+            font-size: 2.3em;
+            
+            font-family: industry, sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            clear: both;
+        }
+        .titleWork{
+            font-size: 1.7em;
+            font-family: industry, sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            text-decoration: none;
+            padding-bottom: 20px;
+            
+        }
+        #tagLine{
+         margin-top:-98px;
+         padding-left:5px;
+         position:absolute;
+         font-size: 1.5em;
+         font-family: industry, sans-serif;
+         font-style: normal;
+         font-weight: 700;
+        }
+        h3{
+         font-size: 1.7em;
+         font-family: industry, sans-serif;
+         font-style: normal;
+         font-weight: 600; 
+        }
+         .portrait{
+            width:100%;
+            height:100%;
+        }
+        #portraitBox{
+            width: 100%;
+            height:100%;
+            justify-content: center;
+            display: flex;
+            padding-left: 40px;
+            padding-right: 40px;
+            padding-top:150px; 
+        }
+        
+        .column {
+  float: right;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+        
+ /*        when it is 1200px or wider */
+        @media screen and (min-width: 1200px) { 
+  h1 {
+    font-size: 10.0em;
+  }
+h2 {
+    font-size: 3.0em;     
+            }
+    h3{
+         font-size: 2.0em;    
+            }
+    .titleWork{
+            font-size: 2.0em;
+    }
+#projectsTitle{
+    font-size: 3.0em;  
+            }
+    .introParagraph {
+        font-size: 1.4em;
+    }
+    .topnav a.buttons{
+         font-size: 2.0em;
+        
+            }
+    .topnav a.active{
+          font-size: 2.0em;      
+            }
+    #tagLine {
+              margin-top:-125px;
+              font-size: 1.8em;
+            }
+     #title{
+        margin-top: 69px;
+    }
+}
+
+/*        when it is 750px or less */
+@media screen and (max-width: 750px) { 
+  h1 {
+    font-size: 4.38em;
+  }
+  h2 {
+    font-size: 2.0em;     
+            }
+    h3{
+     font-size: 1.5em; 
+    }
+    .titleWork{
+            font-size: 1.5em;
+    }
+#projectsTitle{
+    font-size: 2.0em;
+    padding-left:40px;
+    padding-right:40px;
+    color: #000000;
+            }
+    .introParagraph {
+        font-size: 1.0em;
+    }
+    .topnav a.buttons{
+         font-size: 1.2em;
+        padding: 60px 15px;
+            }
+    .topnav a.active{
+        font-size: 1.4em;  
+        padding: 30px 25px;
+        width:10px;
+            }
+    #title{
+        padding-left: 0px;
+        margin-top: 110px
+    }
+    #tagLine {
+              margin-top:-60px;  
+              padding-left: 4px;
+              font-size: 1.3em;
+            }
+    #intro{
+            padding: 40px;
+        
+    }
+    .tilesContainer {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+     .column {
+    width: 100%;
+  }
+}
+        footer{
+            padding: 90px;
+            font-size: 1.0em;
+            font-family: industry, sans-serif;
+            font-style: normal;
+            font-weight: 700;
+        } 
+         #back{
+            text-decoration: none;
+            color: #f58310;
+        }
+                /* Style all font awesome icons */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-instagram {
+  background: white;
+  color: #f58310;
+}
+
+/* Twitter */
+.fa-linkedin {
+  background: white;
+  color: #f58310;
+}
+</style>
+</head>
+  
+<body>
+    
+   <nav class="topnav" id="myTopnav">
+  <a href="index.html" class="active" id="name">COLIN SCHOTSMAN</a>
+  <a href="index.html" class="buttons">WORK</a>
+  <a href="#contact" class="buttons">CONNECT</a>
+  </nav>
+    
+    <div id="mainContent">
+<div id="header">
+ <div id="title">
+  <h1>UX UI<br>GRAPHIC<br>MOTION<br>DESIGN</h1>
+     </div>
+   </div>
+      </div> 
+    
+    <div class="row">
+    <div class="column" >
+        <div id="portraitBox">
+    <img src="img/portrait.jpg" class="portrait">
+            </div>
+  </div>
+  <div class="column" >
+    <div id="intro">
+        
+<!--    <h2>WHO&quest;</h2>-->
+     <h2>HI&comma; I&apos;M COLIN&excl;</h2>   
+<!--    <h3>A human who loves building products for humans&excl; </h3>-->
+     <p class="introParagraph"> A human who loves building products for humans&excl;</p>   
+    <p class="introParagraph">To me&comma; problem solving is all about being bold&period; I use bold solutions to fill the gap between the user and their needs&period;</p>
+        
+    <h2>BUILDING SKILLS INCLUDE&colon;</h2>
+    <p class="introParagraph"> Ux&comma; Ui&comma; Human Centered Research&comma; HTML&comma; CSS&comma; Javascript&comma; Adobe Suite&comma; Circuit building&comma; Arduino&comma; Processing3&comma; P5&comma; 3JS&comma; Wireframe Prototyping&comma; Frameworks&comma; User Flow&comma; Personas&comma; Conducting Interviews and Research&period;</p> 
+   
+        
+    <h2>LET&apos;S BUILD SOMETHING BOLD&period;</h2> 
+    <p class="introParagraph">Connect with me to start building your solutions&excl;</p>  
+     
+        
+    </div>
+  </div>
+    </div>
+    
+     
+    
+    
+    <div id="content">
+    <h3 id="projectsTitle">Past Builds</h3>
+    <div class="tilesContainer">
+    <div class="tileWrap">
+        <p class="titleWork">Ux&sol;Ui</p>
+    <a class="tileWrap Udesign" style="transform: none;" href="udesign.html">
+        <div class="description"><h3>Cooldown &ndash; App Concept</h3><p>1st Place in Udesign Hackathon&period; Allows students to schedule breaks</p></div>
+        </a>
+        </div>
+    
+         <div class="tileWrap">
+        <p class="titleWork">Ux&sol;Ui</p>
+    <a class="tileWrap Wordplop" style="transform: none;" href="wordplop.html">
+        <div class="description"><h3>Wordplop &ndash; Web App</h3><p>Web app uses storytelling to teach children vocabulary</p></div>
+        </a>
+        </div>
+        
+        <div class="tileWrap">
+        <p class="titleWork">Ux&sol;Ui</p>
+    <a class="tileWrap Athena" style="transform: none;" href="athena.html">
+        <div class="description"><h3>Athena &ndash; Research</h3><p>A research and development study on online education during a pandemic for EduShare</p></div>
+        </a>
+        </div>
+        
+        <div class="tileWrap">
+        <p class="titleWork">Ux&sol;Ui</p>
+    <a class="tileWrap Climate" style="transform: none;" href="climateChange.html">
+        <div class="description"><h3>Climate Change &ndash; Interactive Website</h3><p>Interactive website uses threejs and storytelling to communicate the importance of renewable energy.</p></div>
+        </a>
+        </div>
+        
+        <div class="tileWrap">
+        <p class="titleWork">Motion</p>
+    <a class="tileWrap Google" style="transform: none;" href="google.html">
+        <div class="description"><h3>Pompeii &ndash; Google Doodle</h3><p>Google doodle designed for the historic eruption of Mt Vesuvius</p></div>
+        </a>
+        </div>
+        
+        <div class="tileWrap">
+        <p class="titleWork">Motion</p>
+    <a class="tileWrap Hungr" style="transform: none;" href="hungr.html">
+        <div class="description"><h3>Hungr &ndash; Future Interface</h3><p>Directed, filmed and edited a future food interface that helps users make better food choices</p></div>
+        </a>
+        </div>
+        
+        <div class="tileWrap">
+        <p class="titleWork">Motion</p>
+    <a class="tileWrap Poster" style="transform: none;" href="poster.html">
+        <div class="description"><h3>Poster Animation &ndash; Design Challenge </h3><p>Developed a fictional story and used motion graphics to communicate the story's message.</p></div>
+        </a>
+        </div>
+        
+         <div class="tileWrap">
+        <p class="titleWork">Graphic</p>
+    <a class="tileWrap Book" style="transform: none;" href="book.html">
+        <div class="description"><h3>The Hobbit &ndash; Redesign</h3><p>Redesigned this famous book cover as a personal design challenge to communicate meaning of story.</p></div>
+        </a>
+        </div>
+        
+        <div class="tileWrap">
+        <p class="titleWork">Graphic</p>
+    <a class="tileWrap Logo" style="transform: none;" href="logo.html">
+        <div class="description"><h3>Landscaping &ndash; Logo Design</h3><p>Stationary and logo designed to communicate a fictional landscaping company</p></div>
+        </a>
+        </div>
+        
+    </div>
+    </div>
+    <footer>
+    <div id="copyright">
+    &copy; 2021 COLIN SCHOTSMAN
+            </div>
+        <a href="https://www.instagram.com/cschotsm_art_design/" class="fa fa-instagram" target="_blank"></a>
+        <a href="https://www.linkedin.com/in/colin-schotsman-337a02207" class="fa fa-linkedin" target="_blank"></a>
+    </footer>
+    
+    
+    <script>
+        //Sticky nav code from W3schools, https://www.w3schools.com/howto/howto_js_navbar_sticky.asp
+  // When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+window.onload = function() {mySecondFunction()};
+// Get the header
+var header = document.getElementById("myTopnav");
+
+// Get the offset position of the navbar
+var sticky = header.offsetTop;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+ function mySecondFunction() {
+     if (window.innerWidth <= 750) {
+         document.getElementById("name").innerHTML = "COLIN SCHOT SMAN";
+     }
+ }
+  </script>
+</body>
+
+</html>
